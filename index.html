@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Каталог</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.css?_v=20220228191030">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+	body {
+		background: #E5E5E5;
+	}
+
+	.page {
+		max-width: 1180px;
+		display: flex;
+		align-items: flex-start;
+		margin: 50px auto 0px;
+		padding: 0px 10px;
+	}
+
+	.filter-null {
+		width: 270px;
+		border: 1px solid #555;
+		height: 600px;
+	}
+
+	@media (max-width: 768px) {
+		.filter-null {
+			display: none;
+		}
+
+		.page {
+			padding: 0;
+		}
+	}
+</style>
+
+<body>
+	<main class="page">
+		<div class="filter-null"></div>
+		<div class="catalogs">
+			<div class="catalogs__item catalog">
+				<!-- Блок картинки -->
+				<div class="catalog__img-block">
+					<a href="#" class="catalog__img-link">
+						<img src="img/01.png" alt="">
+					</a>
+				</div>
+				<!-- Блок с названием товара и артикулом -->
+				<div class="catalog__text-block">
+					<div class="catalog__new-sale catalog__new-sale--hidden">
+						<div class="catalog__new">Новинка</div>
+						<div class="catalog__sale">Скидка</div>
+					</div>
+					<a href="#" class="catalog__title">
+						Автошампунь Бесконтактный конц (1:5) `PREMIUM` (розовый) 5л
+					</a>
+					<div class="catalog__article">
+						Артикул: <span>Ас-336</span>
+					</div>
+				</div>
+				<!-- Весь нижний блок с радио кнопками, ценой и кнопкой купить -->
+				<div class="catalog__buttons-block">
+					<!-- Блок с текстом новинка, скидка, а также все кнопки из формы -->
+					<div class="catalog__buttons">
+						<!-- В месте, новинка, скидка -->
+						<div class="catalog__info">
+							<div class="catalog__quantity-on-place">
+								<p>В месте: <span class="place-quantity">3</span> шт</p>
+							</div>
+							<div class="catalog__new-sale">
+								<div class="catalog__new">Новинка</div>
+								<div class="catalog__sale">Скидка</div>
+							</div>
+						</div>
+						<!-- Штука, место, выбор количества товара -->
+						<form action="#" class="catalog__inputs">
+							<div class="catalog__piece-place">
+								<label class="catalog__label">
+									<input class="catalog__input" data-piece="0" checked type="radio" value="piece"
+										name="piecePlace">
+									<span class="catalog__radio-text">Штука</span>
+								</label>
+								<label class="catalog__label">
+									<input class="catalog__input" data-place="0" type="radio" value="place" name="piecePlace">
+									<span class="catalog__radio-text">Место</span>
+								</label>
+							</div>
+							<div class="catalog__quantity">
+								<div class="quantity">
+									<button type="button" class="quantity__button quantity__button_minus"></button>
+									<div class="quantity__input">
+										<input autocomplete="off" data-check="true" type="text" name="form[]" value="0">
+									</div>
+									<button type="button" class="quantity__button quantity__button_plus"></button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- Блок с ценой -->
+					<div class="catalog__price-block">
+						<div class="catalog__price-wrapper">
+							<div class="catalog__article catalog__article--hidden">
+								Артикул: <span>Ас-336</span>
+							</div>
+							<div class="catalog__price">
+								<span data-price="1410" data-pricePiece="0" data-pricePlace="0">1410</span> ₽
+							</div>
+							<button class="catalog__buy-button">Купить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catalogs__item catalog">
+				<div class="catalog__img-block">
+					<a href="#" class="catalog__img-link">
+						<img src="img/02.png" alt="">
+					</a>
+				</div>
+				<div class="catalog__text-block">
+					<div class="catalog__new-sale catalog__new-sale--hidden">
+						<div class="catalog__sale">Скидка</div>
+					</div>
+					<a href="#" class="catalog__title">
+						Лампа диод 12/24V S25 21W 12 диод 1 конт Белая (стопы, зад ход, поворот, противотуман)
+					</a>
+					<div class="catalog__article">
+						Артикул: <span>S08202038</span>
+					</div>
+				</div>
+				<div class="catalog__buttons-block">
+					<div class="catalog__buttons">
+						<div class="catalog__info">
+							<div class="catalog__new-sale">
+								<div class="catalog__sale">Скидка</div>
+							</div>
+						</div>
+						<form action="#" class="catalog__inputs">
+							<div class="catalog__piece-place">
+								<label class="catalog__label">
+									<input class="catalog__input" data-piece="0" checked type="radio" value="piece"
+										name="piecePlace">
+									<span class="catalog__radio-text">Штука</span>
+								</label>
+								<label class="catalog__label disabled">
+									<input class="catalog__input" data-place="0" type="radio" value="place" name="piecePlace">
+									<span class="catalog__radio-text">Место</span>
+								</label>
+							</div>
+							<div class="catalog__quantity">
+								<div class="quantity">
+									<button type="button" class="quantity__button quantity__button_minus"></button>
+									<div class="quantity__input">
+										<input autocomplete="off" data-check="true" type="text" name="form[]" value="0">
+									</div>
+									<button type="button" class="quantity__button quantity__button_plus"></button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="catalog__price-block">
+						<div class="catalog__price-wrapper">
+							<div class="catalog__article catalog__article--hidden">
+								Артикул: <span>S08202038</span>
+							</div>
+							<div class="catalog__price">
+								<span data-price="710" data-pricePiece="0" data-pricePlace="0">710</span> ₽
+							</div>
+							<button class="catalog__buy-button">Купить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="js/app.js?_v=20220228191030"></script>
+</body>
+
+</html>

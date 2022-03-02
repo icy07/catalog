@@ -5,7 +5,7 @@
 	<title>Каталог</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.css?_v=20220228191030">
+	<link rel="stylesheet" href="css/style.autolive.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>
@@ -42,58 +42,60 @@
 	<main class="page">
 		<div class="filter-null"></div>
 		<div class="catalogs">
-			<div class="catalogs__item catalog">
+			<div class="catalogs__item catalog-item">
 				<!-- Блок картинки -->
-				<div class="catalog__img-block">
-					<a href="#" class="catalog__img-link">
+				<div class="catalog-item__img-block">
+					<a href="#" class="catalog-item__img-link">
 						<img src="img/01.png" alt="">
 					</a>
 				</div>
 				<!-- Блок с названием товара и артикулом -->
-				<div class="catalog__text-block">
-					<div class="catalog__new-sale catalog__new-sale--hidden">
-						<div class="catalog__new">Новинка</div>
-						<div class="catalog__sale">Скидка</div>
+				<div class="catalog-item__text-block">
+					<div class="catalog-item__new-sale catalog-item__new-sale--hidden">
+						<div class="catalog-item__new">Новинка</div>
+						<div class="catalog-item__sale">Скидка</div>
 					</div>
-					<a href="#" class="catalog__title">
+					<a href="#" class="catalog-item__title">
 						Автошампунь Бесконтактный конц (1:5) `PREMIUM` (розовый) 5л
 					</a>
-					<div class="catalog__article">
+					<div class="catalog-item__article">
 						Артикул: <span>Ас-336</span>
 					</div>
 				</div>
 				<!-- Весь нижний блок с радио кнопками, ценой и кнопкой купить -->
-				<div class="catalog__buttons-block">
+				<div class="catalog-item__buttons-block">
 					<!-- Блок с текстом новинка, скидка, а также все кнопки из формы -->
-					<div class="catalog__buttons">
+					<div class="catalog-item__buttons">
 						<!-- В месте, новинка, скидка -->
-						<div class="catalog__info">
-							<div class="catalog__quantity-on-place">
+						<div class="catalog-item__info">
+							<div class="catalog-item__quantity-on-place">
 								<p>В месте: <span class="place-quantity">3</span> шт</p>
 							</div>
-							<div class="catalog__new-sale">
-								<div class="catalog__new">Новинка</div>
-								<div class="catalog__sale">Скидка</div>
+							<div class="catalog-item__new-sale">
+								<div class="catalog-item__new">Новинка</div>
+								<div class="catalog-item__sale">Скидка</div>
 							</div>
 						</div>
 						<!-- Штука, место, выбор количества товара -->
-						<form action="#" class="catalog__inputs">
-							<div class="catalog__piece-place">
-								<label class="catalog__label">
-									<input class="catalog__input" data-piece="0" checked type="radio" value="piece"
+						<form action="#" class="catalog-item__inputs">
+							<div class="catalog-item__piece-place">
+								<label class="catalog-item__label">
+									<input class="catalog-item__input" data-piece="0" checked type="radio" value="piece"
 										name="piecePlace">
-									<span class="catalog__radio-text">Штука</span>
+									<span class="catalog-item__radio-text">Штука</span>
 								</label>
-								<label class="catalog__label">
-									<input class="catalog__input" data-place="0" type="radio" value="place" name="piecePlace">
-									<span class="catalog__radio-text">Место</span>
+								<label class="catalog-item__label">
+									<input class="catalog-item__input" data-place="0" type="radio" value="place"
+										name="piecePlace">
+									<span class="catalog-item__radio-text">Место</span>
 								</label>
 							</div>
-							<div class="catalog__quantity">
+							<div class="catalog-item__quantity">
 								<div class="quantity">
 									<button type="button" class="quantity__button quantity__button_minus"></button>
 									<div class="quantity__input">
-										<input autocomplete="off" data-check="true" type="text" name="form[]" value="0">
+										<input autocomplete="off" oninput="this.value = this.value.replace(/[^\d]/g,'');"
+											data-check="true" type="text" name="form[]" value="0">
 									</div>
 									<button type="button" class="quantity__button quantity__button_plus"></button>
 								</div>
@@ -101,75 +103,77 @@
 						</form>
 					</div>
 					<!-- Блок с ценой -->
-					<div class="catalog__price-block">
-						<div class="catalog__price-wrapper">
-							<div class="catalog__article catalog__article--hidden">
+					<div class="catalog-item__price-block">
+						<div class="catalog-item__price-wrapper">
+							<div class="catalog-item__article catalog-item__article--hidden">
 								Артикул: <span>Ас-336</span>
 							</div>
-							<div class="catalog__price">
+							<div class="catalog-item__price">
 								<span data-price="1410" data-pricePiece="0" data-pricePlace="0">1410</span> ₽
 							</div>
-							<button class="catalog__buy-button">Купить</button>
+							<button class="catalog-item__buy-button">Купить</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="catalogs__item catalog">
-				<div class="catalog__img-block">
-					<a href="#" class="catalog__img-link">
+			<div class="catalog-items__item catalog-item">
+				<div class="catalog-item__img-block">
+					<a href="#" class="catalog-item__img-link">
 						<img src="img/02.png" alt="">
 					</a>
 				</div>
-				<div class="catalog__text-block">
-					<div class="catalog__new-sale catalog__new-sale--hidden">
-						<div class="catalog__sale">Скидка</div>
+				<div class="catalog-item__text-block">
+					<div class="catalog-item__new-sale catalog-item__new-sale--hidden">
+						<div class="catalog-item__sale">Скидка</div>
 					</div>
-					<a href="#" class="catalog__title">
+					<a href="#" class="catalog-item__title">
 						Лампа диод 12/24V S25 21W 12 диод 1 конт Белая (стопы, зад ход, поворот, противотуман)
 					</a>
-					<div class="catalog__article">
+					<div class="catalog-item__article">
 						Артикул: <span>S08202038</span>
 					</div>
 				</div>
-				<div class="catalog__buttons-block">
-					<div class="catalog__buttons">
-						<div class="catalog__info">
-							<div class="catalog__new-sale">
-								<div class="catalog__sale">Скидка</div>
+				<div class="catalog-item__buttons-block">
+					<div class="catalog-item__buttons">
+						<div class="catalog-item__info">
+							<div class="catalog-item__new-sale">
+								<div class="catalog-item__sale">Скидка</div>
 							</div>
 						</div>
-						<form action="#" class="catalog__inputs">
-							<div class="catalog__piece-place">
-								<label class="catalog__label">
-									<input class="catalog__input" data-piece="0" checked type="radio" value="piece"
+						<form action="#" class="catalog-item__inputs">
+							<div class="catalog-item__piece-place">
+								<label class="catalog-item__label">
+									<input class="catalog-item__input" data-piece="0" checked type="radio" value="piece"
 										name="piecePlace">
-									<span class="catalog__radio-text">Штука</span>
+									<span class="catalog-item__radio-text">Штука</span>
 								</label>
-								<label class="catalog__label disabled">
-									<input class="catalog__input" data-place="0" type="radio" value="place" name="piecePlace">
-									<span class="catalog__radio-text">Место</span>
+								<label class="catalog-item__label disabled">
+									<input class="catalog-item__input" data-place="0" type="radio" value="place"
+										name="piecePlace">
+									<span class="catalog-item__radio-text">Место</span>
 								</label>
 							</div>
-							<div class="catalog__quantity">
+							<div class="catalog-item__quantity">
 								<div class="quantity">
 									<button type="button" class="quantity__button quantity__button_minus"></button>
 									<div class="quantity__input">
-										<input autocomplete="off" data-check="true" type="text" name="form[]" value="0">
+										<input autocomplete="off" oninput="this.value = this.value.replace(/[^\d]/g,'');"
+											data-check="true" type="text" name="form[]" value="0">
 									</div>
 									<button type="button" class="quantity__button quantity__button_plus"></button>
 								</div>
 							</div>
 						</form>
 					</div>
-					<div class="catalog__price-block">
-						<div class="catalog__price-wrapper">
-							<div class="catalog__article catalog__article--hidden">
+					<div class="catalog-item__price-block">
+						<div class="catalog-item__price-wrapper">
+							<div class="catalog-item__article catalog-item__article--hidden">
 								Артикул: <span>S08202038</span>
 							</div>
-							<div class="catalog__price">
+							<div class="catalog-item__price">
 								<span data-price="710" data-pricePiece="0" data-pricePlace="0">710</span> ₽
 							</div>
-							<button class="catalog__buy-button">Купить</button>
+							<button class="catalog-item__buy-button">Купить</button>
 						</div>
 					</div>
 				</div>
